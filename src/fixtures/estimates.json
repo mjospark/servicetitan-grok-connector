@@ -1,0 +1,37 @@
+{
+  "estimates": [
+    {
+      "id": 2001,
+      "number": "EST-2001",
+      "status": "Open",
+      "customerName": "Sarah Chen",
+      "jobId": 1001,
+      "summary": "200A panel + surge protector",
+      "total": 4850.00,
+      "createdOn": "2026-10-20T14:22:00-06:00",
+      "expiresOn": "2026-11-03T23:59:59-06:00"
+    },
+    {
+      "id": 2002,
+      "number": "EST-2002",
+      "status": "Open",
+      "customerName": "Derek Ortiz",
+      "jobId": 1002,
+      "summary": "Wallbox Pulsar Plus 48A + permit",
+      "total": 2195.00,
+      "createdOn": "2026-10-22T09:10:00-06:00",
+      "expiresOn": "2026-11-05T23:59:59-06:00"
+    },
+    {
+      "id": 2003,
+      "number": "EST-2003",
+      "status": "Open",
+      "customerName": "West Valley Auto Spa",
+      "jobId": null,
+      "summary": "LED parking-lot retrofit — 24 poles",
+      "total": 18750.00,
+      "createdOn": "2026-10-15T11:00:00-06:00",
+      "expiresOn": "2026-10-29T23:59:59-06:00"
+    }
+  ]
+}

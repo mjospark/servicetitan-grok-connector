@@ -1,0 +1,79 @@
+{
+  "jobs": [
+    {
+      "id": 1001,
+      "number": "JOB-1001",
+      "status": "Scheduled",
+      "summary": "Panel upgrade — 100A to 200A",
+      "customerName": "Sarah Chen",
+      "customerPhone": "+1-801-555-0101",
+      "address": "1420 E Aspen Dr, Midvale, UT 84047",
+      "scheduledStart": "2026-10-25T08:00:00-06:00",
+      "scheduledEnd": "2026-10-25T12:00:00-06:00",
+      "technician": "Marcus Hale",
+      "jobType": "Service",
+      "priority": "Normal",
+      "businessUnit": "BrightPath Electrical"
+    },
+    {
+      "id": 1002,
+      "number": "JOB-1002",
+      "status": "Dispatched",
+      "summary": "EV charger install — Level 2",
+      "customerName": "Derek Ortiz",
+      "customerPhone": "+1-801-555-0102",
+      "address": "88 W Canyon Rd, Sandy, UT 84070",
+      "scheduledStart": "2026-10-25T09:30:00-06:00",
+      "scheduledEnd": "2026-10-25T13:30:00-06:00",
+      "technician": "Marcus Hale",
+      "jobType": "Install",
+      "priority": "High",
+      "businessUnit": "BrightPath Electrical"
+    },
+    {
+      "id": 1003,
+      "number": "JOB-1003",
+      "status": "Scheduled",
+      "summary": "Troubleshoot flickering kitchen lights",
+      "customerName": "Amy Brooks",
+      "customerPhone": "+1-801-555-0103",
+      "address": "512 N Main St, Murray, UT 84107",
+      "scheduledStart": "2026-10-25T13:00:00-06:00",
+      "scheduledEnd": "2026-10-25T15:00:00-06:00",
+      "technician": "Jordan Lee",
+      "jobType": "Service",
+      "priority": "Normal",
+      "businessUnit": "BrightPath Electrical"
+    },
+    {
+      "id": 1004,
+      "number": "JOB-1004",
+      "status": "Scheduled",
+      "summary": "New construction rough-in — Lot 14",
+      "customerName": "Summit Homes LLC",
+      "customerPhone": "+1-801-555-0104",
+      "address": "Lot 14 Cedar Crest, Draper, UT 84020",
+      "scheduledStart": "2026-10-26T07:00:00-06:00",
+      "scheduledEnd": "2026-10-26T16:00:00-06:00",
+      "technician": "Jordan Lee",
+      "jobType": "Project",
+      "priority": "Normal",
+      "businessUnit": "BrightPath Electrical"
+    },
+    {
+      "id": 1005,
+      "number": "JOB-1005",
+      "status": "Completed",
+      "summary": "GFCI outlet replacements — bath/kitchen",
+      "customerName": "Priya Nair",
+      "customerPhone": "+1-801-555-0105",
+      "address": "2200 S Highland Dr, Salt Lake City, UT 84106",
+      "scheduledStart": "2026-10-24T10:00:00-06:00",
+      "scheduledEnd": "2026-10-24T12:00:00-06:00",
+      "technician": "Marcus Hale",
+      "jobType": "Service",
+      "priority": "Normal",
+      "businessUnit": "BrightPath Electrical"
+    }
+  ]
+}

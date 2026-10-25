@@ -1,0 +1,40 @@
+{
+  "invoices": [
+    {
+      "id": 3001,
+      "number": "INV-3001",
+      "status": "Overdue",
+      "customerName": "Priya Nair",
+      "jobId": 1005,
+      "total": 420.00,
+      "balance": 420.00,
+      "invoiceDate": "2026-09-28",
+      "dueDate": "2026-10-12",
+      "daysOverdue": 12
+    },
+    {
+      "id": 3002,
+      "number": "INV-3002",
+      "status": "Overdue",
+      "customerName": "Summit Homes LLC",
+      "jobId": null,
+      "total": 9200.00,
+      "balance": 4600.00,
+      "invoiceDate": "2026-09-15",
+      "dueDate": "2026-09-29",
+      "daysOverdue": 25
+    },
+    {
+      "id": 3003,
+      "number": "INV-3003",
+      "status": "Paid",
+      "customerName": "Amy Brooks",
+      "jobId": null,
+      "total": 185.00,
+      "balance": 0,
+      "invoiceDate": "2026-10-10",
+      "dueDate": "2026-10-24",
+      "daysOverdue": 0
+    }
+  ]
+}

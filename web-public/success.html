@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You're in — ServiceTitan Grok Bridge</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="badge" id="tierBadge">You're in</div>
+    <h1>Your license key</h1>
+    <p class="lede">Save this key. Paste it into Grok Bot / the bridge as <code>ST_LICENSE_KEY</code>.</p>
+  </header>
+  <section class="card wide">
+    <p id="emailLine" class="fine"></p>
+    <pre id="keyBox" class="key">Loading…</pre>
+    <button type="button" id="copyBtn">Copy key</button>
+    <p id="err" class="status error" hidden></p>
+    <h2>Next</h2>
+    <ol>
+      <li>Keep this page or email yourself the key</li>
+      <li>In Grok Bot, connect the ServiceTitan plugin and set the license key</li>
+      <li>Ask for today’s jobs (America/Denver)</li>
+    </ol>
+    <p><a href="/">← Back</a></p>
+  </section>
+  <script>
+    (async () => {
+      const params = new URLSearchParams(location.search);
+      const demoKey = params.get("key");
+      const email = params.get("email");
+      const sessionId = params.get("session_id");
+      const isFree = params.get("free") === "1";
+      const isDemo = params.get("demo") === "1";
+      const keyBox = document.getElementById("keyBox");
+      const emailLine = document.getElementById("emailLine");
+      const err = document.getElementById("err");
+      const badge = document.getElementById("tierBadge");
+
+      if (demoKey) {
+        keyBox.textContent = demoKey;
+        if (isFree) {
+          if (badge) badge.textContent = "Free license";
+          if (email) emailLine.textContent = "Free license for " + email + " — no card charged";
+        } else if (isDemo) {
+          if (badge) badge.textContent = "Pro demo (no Stripe yet)";
+          if (email) emailLine.textContent = "Issued for " + email + " (demo / local mode)";
+        } else {
+          if (email) emailLine.textContent = "Issued for " + email;
+        }
+        return;
+      }
+      if (!sessionId) {
+        err.hidden = false;
+        err.textContent = "Missing session_id — return to checkout.";
+        keyBox.textContent = "—";
+        return;
+      }
+      try {
+        const res = await fetch("/api/license-by-session?session_id=" + encodeURIComponent(sessionId));
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Failed");
+        keyBox.textContent = data.licenseKey;
+        emailLine.textContent = "Issued for " + data.email;
+      } catch (e) {
+        err.hidden = false;
+        err.textContent = e.message || String(e);
+        keyBox.textContent = "—";
+      }
+    })();
+    document.getElementById("copyBtn").onclick = async () => {
+      const t = document.getElementById("keyBox").textContent;
+      if (t && t !== "—" && t !== "Loading…") {
+        await navigator.clipboard.writeText(t);
+        document.getElementById("copyBtn").textContent = "Copied";
+      }
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "technicians": [
+    {
+      "id": 401,
+      "name": "Marcus Hale",
+      "active": true,
+      "businessUnit": "BrightPath Electrical"
+    },
+    {
+      "id": 402,
+      "name": "Jordan Lee",
+      "active": true,
+      "businessUnit": "BrightPath Electrical"
+    },
+    {
+      "id": 403,
+      "name": "Casey Nguyen",
+      "active": true,
+      "businessUnit": "BrightPath Electrical"
+    }
+  ],
+  "businessHours": {
+    "start": "07:00",
+    "end": "17:00",
+    "timezone": "America/Denver"
+  }
+}

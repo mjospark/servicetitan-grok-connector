@@ -1,0 +1,9 @@
+{
+  "name": "servicetitan-grok-connector",
+  "description": "ServiceTitan board in Grok Bot — jobs, estimates, invoices, schedule gaps (read-only). Hosted bridge is a separate paid subscription.",
+  "command": "node",
+  "args": ["dist/mcp/server.js"],
+  "env": {
+    "MOCK": "1"
+  }
+}

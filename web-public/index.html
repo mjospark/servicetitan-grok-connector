@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ServiceTitan ↔ Grok Bot Bridge — by BrightPath</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="badge">Free signup · Optional Pro host</div>
+    <h1>Your ServiceTitan board, inside Grok Bot</h1>
+    <p class="lede">
+      Morning job digests. Open estimates. Overdue invoices. Schedule gaps.
+      Built by a Utah electrician who runs BrightPath on ServiceTitan — for trades that want the bot to know the board without clicking the website.
+    </p>
+    <p class="fine">
+      Start free — get a working license key with no card. Upgrade to Pro ($49/mo) when you want the paid hosted bridge; money goes to Matthew James / BrightPath via Stripe.
+    </p>
+  </header>
+
+  <section class="grid">
+    <article class="card">
+      <h2>What you get</h2>
+      <ul>
+        <li>Today’s / range jobs from ServiceTitan</li>
+        <li>Open estimates &amp; overdue invoices</li>
+        <li>Tech schedule gaps (≥30 min)</li>
+        <li>Draft customer follow-ups — <em>never sent without your yes</em></li>
+      </ul>
+    </article>
+
+    <article class="card highlight free">
+      <h2>Free</h2>
+      <p class="price">$0 · forever</p>
+      <p>Working license key. No card. No Stripe.</p>
+      <form id="signup-free">
+        <label>
+          Work email
+          <input type="email" name="email" required placeholder="you@yourcompany.com" />
+        </label>
+        <button type="submit" id="freeBtn" class="btn-free">Get free license</button>
+      </form>
+      <p id="status-free" class="status" hidden></p>
+    </article>
+
+    <article class="card highlight">
+      <h2>Pro bridge — $49/mo</h2>
+      <p class="price">$49 / month</p>
+      <p>Hosted MCP + license. Pays via your existing Gumroad/Whop (or Stripe if you prefer). Cancel anytime.</p>
+      <form id="signup-pro">
+        <label>
+          Work email
+          <input type="email" name="email" required placeholder="you@yourcompany.com" />
+        </label>
+        <button type="submit" id="payBtn">Subscribe with Stripe</button>
+      </form>
+      <p id="status-pro" class="status" hidden></p>
+      <p class="fine" id="modeNote"></p>
+    </article>
+
+    <article class="card">
+      <h2>How it works</h2>
+      <ol>
+        <li>Pick Free or Pro above → get a license key</li>
+        <li>Install the free plugin from Connect apps (when listed)</li>
+        <li>Paste key into your bot / hosted bridge settings</li>
+        <li>Ask: “What’s on the board today?”</li>
+      </ol>
+    </article>
+  </section>
+
+  <section class="card wide">
+    <h2>Self-host instead?</h2>
+    <p>
+      Repo is MIT. Run the MCP with <code>MOCK=1</code> for demos, or your own ServiceTitan partner credentials.
+      For production against live ST data without our host, set <code>LICENSE_KEY</code> yourself, or run fully self-funded.
+    </p>
+  </section>
+
+  <footer>
+    <p>BrightPath Electrical · Utah · Not affiliated with ServiceTitan, Inc. or xAI.</p>
+    <p><a href="https://x.ai/bot/marketplace/submit-a-plugin">Marketplace submit</a> · Listing must remain free per publisher terms.</p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
